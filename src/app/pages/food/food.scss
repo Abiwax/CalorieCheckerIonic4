@@ -1,0 +1,12 @@
+ion-content{
+    --background: url("assets/images/cal.png") no-repeat center center /cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+ion-card {
+  --background: white;
+  background-color: white;
+}

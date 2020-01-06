@@ -1,37 +1,39 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CheckTutorial } from './providers/check-tutorial.service';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/tutorial',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   {
-    path: 'account',
-    loadChildren: () => import('./pages/account/account.module').then(m => m.AccountModule)
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
   },
   {
-    path: 'support',
-    loadChildren: () => import('./pages/support/support.module').then(m => m.SupportModule)
+    path: 'food',
+    loadChildren: () => import('./pages/food-recipe-result/food-recipe-result.module').then(m => m.FoodRecipeResultPageModule)
   },
   {
-    path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule)
+    path: 'food-result',
+    loadChildren: () => import('./pages/food-result/food-result.module').then(m => m.FoodResultPageModule)
   },
   {
-    path: 'signup',
-    loadChildren: () => import('./pages/signup/signup.module').then(m => m.SignUpModule)
+    path: 'recipe-result',
+    loadChildren: () => import('./pages/recipe-result/recipe-result.module').then(m => m.RecipeResultModule)
   },
   {
-    path: 'app',
-    loadChildren: () => import('./pages/tabs-page/tabs-page.module').then(m => m.TabsModule)
+    path: 'recipes-result',
+    loadChildren: () => import('./pages/reciperesult/reciperesult.module').then(m => m.ReciperesultModule)
   },
   {
-    path: 'tutorial',
-    loadChildren: () => import('./pages/tutorial/tutorial.module').then(m => m.TutorialModule),
-    canLoad: [CheckTutorial]
+    path: 'bmi',
+    loadChildren: () => import('./pages/bmi-tab/bmi-tab.module').then(m => m.BmiTabPageModule)
+  },
+  {
+    path: 'activity',
+    loadChildren: () => import('./pages/activity/activity.module').then(m => m.ActivityPageModule)
   }
 ];
 

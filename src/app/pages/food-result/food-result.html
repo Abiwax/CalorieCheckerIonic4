@@ -1,0 +1,97 @@
+<!--
+  Generated template for the FoodResultPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar color="deep">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="food/details"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Food Result</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <p style="color: white; font-size: x-large; font-style: italic; font-family: Athelas; margin-top: -10px;">{{ food }}</p>
+  <app-skeleton [templates]="servings"></app-skeleton>
+  <ion-grid text-center *ngIf="servings.length > 0">
+    <ion-row text-center *ngFor="let serving of servings">
+        <ion-col>
+          <ion-card style="background-color: white;">
+
+            <p class="overlay"></p>
+            <ion-card-content style="font-size: small;">
+              <ion-card-title style="text-align: center; font-weight: bold; font-size: x-large; color: white; font-family: Athelas; background: darkred;">
+                {{ serving.measurement_description }}
+              </ion-card-title>
+              <ul style="text-align: justify;">
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left; font-weight: bold;">Calcium</span> <span style="float: right;">{{ serving.callcium }} </span>
+                </li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left;font-weight: bold;">Calories</span> <span style="float: right;">{{ serving.calories }}</span>
+                </li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left;font-weight: bold;">Carbohydrate</span> <span style="float: right;">{{ serving.carbohydrate }}</span>
+                </li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left;font-weight: bold;">Cholesterol</span> <span style="float: right;">{{ serving.cholesterol}}</span>
+                </li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left;font-weight: bold;">Fat</span> <span style="float: right;">{{ serving.fat }}</span>
+                </li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span style="float: left;font-weight: bold;">Fiber</span> <span
+                  style="float: right;"> {{ serving.fiber }}</span></li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span style="float: left;font-weight: bold;">Iron</span> <span
+                  style="float: right;"> {{ serving.iron }}</span></li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left;font-weight: bold;">Metric Serving Amount</span> <span style="float: right;">{{ serving.metric_serving_amount }} </span>
+                </li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left;font-weight: bold;">Metric Serving Unit</span> <span style="float: right;">{{ serving.metric_serving_unit }}</span>
+                </li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left;font-weight: bold;">Monounsaturated Fat</span> <span style="float: right;">{{ serving.monounsaturated_fat }} </span>
+                </li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left;font-weight: bold;">Number Of Units</span> <span style="float: right;">{{ serving.number_of_units }} </span>
+                </li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left;font-weight: bold;">Polyunsaturated Fat</span> <span style="float: right;">{{ serving.polyunsaturated_fat }} </span>
+                </li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left;font-weight: bold;">Potassium</span> <span style="float: right;">{{ serving.potassium }}</span>
+                </li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left;font-weight: bold;">Protein</span> <span style="float: right;">{{ serving.protein }}</span>
+                </li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left;font-weight: bold;">Saturated Fat</span> <span style="float: right;">{{ serving.saturated_fat }}</span>
+                </li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left;font-weight: bold;">Serving Description</span> <span style="float: right;">{{ serving.serving_description }}</span>
+                </li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left;font-weight: bold;">Sodium</span> <span
+                  style="float: right;">{{ serving.sodium }} </span></li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left;font-weight: bold;">Sugar</span> <span
+                  style="float: right;">{{ serving.sugar }}</span></li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left;font-weight: bold;">Vitamin A</span> <span style="float: right;">{{ serving.vitamin_a }}</span>
+                </li>
+                <li style="border-top: solid darkred 1px; margin-bottom: 5px;"><span
+                  style="float: left;font-weight: bold;">Vitamin C</span> <span style="float: right;">{{ serving.vitamin_c }}</span>
+                </li>
+              </ul>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

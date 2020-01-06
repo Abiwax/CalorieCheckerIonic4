@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="deep">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center">
+  <div class="spacer" style="height: 30px;"></div>
+  <p
+    style="color: white; font-size: 62px; font-style: italic; font-family: Athelas; font-weight: bold; text-align: center;">
+    CalChecker</p>
+
+  <p *ngIf="error_show" id="error_message">{{ error_detail }}</p>
+  <form [formGroup]="searchForm" (submit)="searchFood()" validate>
+    <!--divs-->
+    <ion-row>
+      <ion-col>
+        <ion-item class="item_back ion-no-padding">
+          <ion-label color="light" position="floating">Food Search</ion-label>
+          <ion-input style="color: white;" #foodtext formControlName="foodtext" type="text"
+                     [class.invalid]="!searchForm.controls.foodtext.valid">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-text-center">
+      <ion-col>
+        <ion-button expand="block" shape="round" color="deep" type="submit">
+          Search
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+  </form>
+</ion-content>

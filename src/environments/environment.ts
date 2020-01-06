@@ -3,7 +3,15 @@
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 export const environment = {
-  production: false
+  production: false,
+  keys: {
+    mapbox: 'pk.eyJ1IjoiYWJpd2F4IiwiYSI6ImNqNXJsODc0ZDB3dXUzMnBobGNhcnM0MmIifQ.yHSN9NoQ8RJEl-Z7rIMq8Q',
+    google: 'AIzaSyAHGzCm4Yxil_s3Q1PcLibXtcCErucF15s'
+  },
+  urls: {
+    main: 'https://evening-caverns-74873.herokuapp.com/fatsecretapi/',
+    ip: 'http://ipinfo.io',
+  }
 };
 
 /*

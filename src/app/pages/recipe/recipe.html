@@ -1,0 +1,36 @@
+<!--
+  Generated template for the RecipePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar>
+    <ion-title>Recipes</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <ion-searchbar (ionInput)="getRecipes($event)" color="light"></ion-searchbar>
+  <app-skeleton [templates]="recipes" type="food"></app-skeleton>
+  <ion-grid class="ion-text-center" *ngIf="recipes.length > 0">
+    <div class="col-lg-12 col-md-12 col-sm-12" *ngFor="let recipe of recipes">
+      <ion-card style="background-size: cover; border-radius: 15px; background-color: white;"
+                [style.background-image]="getBackground(recipe.recipe_image)" (click)="getMoreDetails(recipe)">
+
+        <p class="overlay"></p>
+        <ion-card-content>
+          <ion-card-title style="text-align: center; font-weight: bold; font-size: 20px; color: white;">
+            {{ recipe.recipe_name }}
+          </ion-card-title>
+          <p style="text-align: center; font-weight: bold; color: white;">
+            {{recipe.recipe_description}}
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-grid>
+</ion-content>

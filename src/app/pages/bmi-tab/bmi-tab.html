@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="deep">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>BMI Details</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon slot="icon-only" ios="ios-more" md="md-more" style="color: white; font-size: 25px;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-tabs color="deep">
+
+  <ion-tab-bar slot="bottom" color="deep">
+    <ion-tab-button tab="main" color="light">
+      <ion-icon name="disc"></ion-icon>
+      <ion-label>BMI</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="weight" color="light">
+      <ion-icon name="analytics"></ion-icon>
+      <ion-label>Weight</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="list" color="light">
+      <ion-icon name="list-box"></ion-icon>
+      <ion-label>List</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

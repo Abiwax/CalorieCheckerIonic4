@@ -12,3 +12,16 @@ ion-item {
     color: inherit;
   }
 }
+
+ion-content {
+  --background: url("assets/images/cal.png") no-repeat center center /cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: Athelas;
+}
+
+ion-card {
+  --background: white;
+}

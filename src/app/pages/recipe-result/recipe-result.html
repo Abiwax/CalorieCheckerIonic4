@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar color="deep">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="food/recipe"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recipe Result</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div style="width: 100%; text-align: center;" *ngIf="recipe_image.length > 0">
+    <img [src]="recipe_image[0]">
+  </div>
+  <ion-row class="recipe_details" style="margin-top: -2px;">
+    <ion-row>
+      <ion-col>
+        <p style="color: white; font-size: x-large; font-family: Athelas;">{{ recipe_details.recipe_name }}</p>
+        <p style="color: white; font-size: large; font-style: italic; font-family: Athelas; margin-top: -13px;">{{
+          recipe_details.recipe_description }}</p>
+        <p style="color: white; font-size: medium; font-family: Athelas; margin-top: -10px;"><span
+          style="text-align: center; font-size: medium; font-weight: bold;">Type: </span>{{ recipe_details.recipe_type
+          }}</p>
+        <ion-row class="ion-text-center ion-justify-content-center">
+          <rating style="text-align: center;" [(ngModel)]="recipe_details.rating" readonly="true"></rating>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-row>
+  <ion-row class="recipe_details" style="text-align: center;">
+    <ion-col size="3" style="text-align: center; vertical-align: middle;">
+      <ion-icon ios="ios-clock" md="md-clock" style="color: white; font-size: 40px;"></ion-icon>
+      <p style="color: white; font-size: medium; font-family: Athelas;">Preparation</p>
+      <p style="color: white; font-size: medium; font-family: Athelas;"> {{ recipe_details.preparation_time_min }} </p>
+    </ion-col>
+    <ion-col size="3" style="text-align: center; vertical-align: middle;">
+      <ion-icon ios="ios-bonfire" md="md-bonfire" style="color: white; font-size: 40px;"></ion-icon>
+      <p style="color: white; font-size: medium; font-family: Athelas;">Cooking</p>
+      <p style="color: white; font-size: medium; font-family: Athelas;"> {{ recipe_details.cooking_time_min }} </p>
+    </ion-col>
+    <ion-col size="3" style="text-align: center; vertical-align: middle;">
+      <ion-icon ios="ios-analytics" md="md-analytics" style="color: white; font-size: 40px;"></ion-icon>
+      <p style="color: white; font-size: medium; font-family: Athelas;">Calories</p>
+      <p style="color: white; font-size: medium; font-family: Athelas;"> {{ recipe_details.calories }} </p>
+    </ion-col>
+    <ion-col size="3" style="text-align: center; vertical-align: middle;">
+      <ion-icon ios="ios-pie" md="md-pie" style="color: white; font-size: 40px;"></ion-icon>
+      <p style="color: white; font-size: medium; font-family: Athelas;">Servings</p>
+      <p style="color: white; font-size: medium; font-family: Athelas;"> {{ recipe_details.number_of_servings }} </p>
+    </ion-col>
+
+  </ion-row>
+
+  <p style="color: white; font-size: x-large; font-style: italic; font-family: Athelas; padding-left: 5px;">
+    Ingredients</p>
+  <div>
+    <ion-slides pager>
+      <ion-slide *ngFor="let ingredient of ingredients">
+        <ion-card style="background-size: cover; border-radius: 15px; background-color: white;">
+          <ion-card-content>
+            <ion-card-title style="text-align: center; font-weight: bold; font-size: 20px; color: black;">
+              {{ ingredient.food_name }}
+            </ion-card-title>
+            <p style="text-align: center; font-weight: bold; color: black;">
+              {{ ingredient.ingredient_description }}
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <p style="color: white; font-size: x-large; font-style: italic; font-family: Athelas; padding-left: 5px;">
+    Instructions</p>
+  <div>
+    <ion-slides pager>
+      <ion-slide *ngFor="let instruction of instructions">
+        <ion-card style="background-size: cover; border-radius: 15px; background-color: white;">
+          <ion-card-content>
+            <ion-card-title style="text-align: center; font-weight: bold; font-size: 20px; color: black;">
+              {{ instruction.direction_number }}
+            </ion-card-title>
+            <p style="text-align: center; font-weight: bold; color: black;">
+              {{ instruction.direction_description }}
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
