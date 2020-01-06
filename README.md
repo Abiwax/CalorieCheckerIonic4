@@ -2,16 +2,16 @@
 
 ## Table of Contents
 - [Getting Started](#getting-started)
-- [Setting up API Using Local Django](#setting)
-  - [Local Deployment](#local)
-  - [Heroku Deployment](#heroku)
+- [Setting up API Using Local Django](#setting-up-api-using-local-django)
+  - [Local Deployment](#local-deployment)
+  - [Heroku Deployment](#deploy-on-heroku)
 - [Configuring](#configuring)
-- [Deploying Application](#deploying)
+- [Deploying Application](#deploying-application)
   - [Prerequisites](#prerequisites)
   - [Progressive Web App](#progressive-web-app)
   - [Android](#android)
   - [iOS](#ios)
-  - [Local Web](#web)
+  - [Local Web](#local-web)
 - [App Preview](#app-preview)
 
 
@@ -73,4 +73,5 @@ _Note: See [How to Prevent Permissions Errors](https://docs.npmjs.com/getting-st
 1. Run `npm start` or `ionic serve` in a terminal from the project root.
 
 ## App Preview
+
 <img src="resources/screenshots/cal.png" alt="Calorie">
