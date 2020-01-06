@@ -5,11 +5,11 @@
 export const environment = {
   production: false,
   keys: {
-    mapbox: 'pk.eyJ1IjoiYWJpd2F4IiwiYSI6ImNqNXJsODc0ZDB3dXUzMnBobGNhcnM0MmIifQ.yHSN9NoQ8RJEl-Z7rIMq8Q',
-    google: 'AIzaSyAHGzCm4Yxil_s3Q1PcLibXtcCErucF15s'
+    mapbox: 'pk.',
+    google: 'AIza'
   },
   urls: {
-    main: 'https://evening-caverns-74873.herokuapp.com/fatsecretapi/',
+    main: 'http://127.0.0.1:8000/',
     ip: 'http://ipinfo.io',
   }
 };
