@@ -1,12 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Network} from '@ionic-native/network/ngx';
 import {Platform} from '@ionic/angular';
-/*
-  Generated class for the ConnectionServiceProvider provider.
 
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular DI.
-*/
+
 declare var Connection;
 
 @Injectable()
